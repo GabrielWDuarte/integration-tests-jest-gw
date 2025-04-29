@@ -12,9 +12,9 @@ Este projeto realiza testes de integração automatizados para a API Fakerestapi
 
 Os principais endpoints testados deste projeto são:
 
-- **GET /api/v1/Activities** - Lista todas as atividades
-- **POST /api/v1/Activities** - Cria uma nova atividade
-- **GET /api/v1/Activities/{id}** - Busca uma atividade pelo ID
+- `GET /api/v1/Activities` - Lista todas as atividades
+- `POST /api/v1/Activities` - Cria uma nova atividade
+- `GET /api/v1/Activities/{id}` - Busca uma atividade pelo ID
 - **PUT /api/v1/Activities/{id}** - Atualiza uma atividade pelo ID
 - **DELETE /api/v1/Activities/{id}** - Remove uma atividade pelo ID
 
