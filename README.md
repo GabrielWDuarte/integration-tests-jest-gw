@@ -6,7 +6,7 @@ Este projeto realiza testes de integração automatizados para a API Fakerestapi
 
 - [**PactumJS**] - Framework para testes de API
 - [**ESLint**] - Linter para JavaScript
-- [**SonarQube**] - Análise de qualidade de código
+- **[SonarQube]** - Análise de qualidade de código
 
 ## Endpoints Testados
 
