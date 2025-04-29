@@ -17,5 +17,8 @@ module.exports = {
         openReport: false
       }
     ]
-  ]
+  ],
+  collectCoverage: true, // Habilita a coleta de cobertura
+  coverageDirectory: 'coverage', // Diretório onde os relatórios de cobertura serão armazenados
+  coverageReporters: ['lcov', 'text-summary'], // Gera o relatório de cobertura em formato lcov (para SonarQube) e resumo em texto
 };

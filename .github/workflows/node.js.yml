@@ -19,8 +19,8 @@ jobs:
       with:
         node-version: 21
         cache: 'npm'
-    - run: npm install      
-    - run: npm test
+    - run: npm install
+    - run: npm test --coverage 
 
   sonarcloud:
     name: Run SonarCloud
@@ -32,7 +32,7 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v4.0.0
         with:
-          node-version: 21 
+          node-version: 21
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@v2.0.2      
         env:
