@@ -1,6 +1,6 @@
 # API Integration Tests - Fakerestapi (Activities)
 
-Este projeto realiza testes de integração automatizados para a API Fakerestapi, focando nos endpoints relacionados a Activities. Utiliza as ferramentas Jest, PactumJS, Prettier, ESLint e integração com SonarQube para garantir qualidade, padronização e cobertura dos testes.
+Este projeto realiza testes de integração automatizados para a API Fakerestapi, focando nos endpoints relacionados a Activities. Utiliza as ferramentas PactumJS, ESLint e integração com SonarQube para garantir qualidade, padronização e cobertura dos testes.
 
 ## Tecnologias Utilizadas
 
