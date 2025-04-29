@@ -1,39 +1,57 @@
-# API test automation with Jest and PactumJS
+# API Integration Tests - Fakerestapi (Activities)
 
-> Simple integration between JestJS and PactumJS.
+Este projeto realiza testes de integração automatizados para a **API Fakerestapi**, focando nos endpoints relacionados a **Activities**. Utiliza as ferramentas **Jest**, **PactumJS**, **Prettier**, **ESLint** e integração com **SonarQube** para garantir qualidade, padronização e cobertura dos testes.
 
-## GitHub Actions
+## Tecnologias Utilizadas
 
-[![Node.js CI](https://github.com/ugioni/integration-tests-jest/actions/workflows/node.js.yml/badge.svg?branch=master)](https://github.com/ugioni/integration-tests-jest/actions/workflows/node.js.yml)
+- **Jest** - Test runner para execução dos testes.
+- **PactumJS** - Framework para testes de API, utilizado para realizar chamadas HTTP e validar as respostas.
+- **Prettier** - Ferramenta para formatação automática de código, garantindo consistência.
+- **ESLint** - Linter para detectar e corrigir problemas no código JavaScript.
+- **SonarQube** - Ferramenta de análise de qualidade de código, usada para garantir que o código esteja livre de problemas.
 
-## SonarCloud
+## Endpoints Testados
 
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ugioni_integration-tests-jest&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=ugioni_integration-tests-jest)
+Os principais endpoints testados deste projeto são:
 
-# Getting Started
+- **GET /api/v1/Activities** - Lista todas as atividades.
+- **POST /api/v1/Activities** - Cria uma nova atividade.
+- **GET /api/v1/Activities/{id}** - Busca uma atividade específica pelo ID.
+- **PUT /api/v1/Activities/{id}** - Atualiza uma atividade existente pelo ID.
+- **DELETE /api/v1/Activities/{id}** - Remove uma atividade pelo ID.
 
-### Pactum docs:
- - [PactumJS](https://pactumjs.github.io/)
+### Exemplos de testes realizados:
 
-### Prerequisites:
- - NodeJS `v20`
+1. **GET /api/v1/Activities**:
+   - Este teste verifica se a API retorna corretamente uma lista de todas as atividades.
 
-### How to run?
+2. **POST /api/v1/Activities**:
+   - Este teste cria uma nova atividade e verifica se a resposta contém os dados da nova atividade.
 
-Inside of the project folder run:
+3. **GET /api/v1/Activities/{id}**:
+   - Este teste verifica se uma atividade específica pode ser recuperada corretamente pelo seu ID.
 
- 1. `npm install --save-dev`
- 1. `npm run ci`
+4. **PUT /api/v1/Activities/{id}**:
+   - Este teste realiza a atualização de uma atividade existente e valida se a alteração foi feita corretamente.
 
-After that you should see a `./output` folder with some `HTML` reports.
+5. **DELETE /api/v1/Activities/{id}**:
+   - Este teste exclui uma atividade pelo seu ID e verifica se o processo foi concluído com sucesso.
 
-### Docs to Api under tests: 
- - [Toolshop API](https://api.practicesoftwaretesting.com/api/documentation)
- - [Deck of Cards](https://deckofcardsapi.com/)
- - [JSON placeholder](https://jsonplaceholder.typicode.com/)
- - [http bin](http://httpbin.org/)
- - [rick and morty api](https://rickandmortyapi.com/documentation/#rest)
- - [Petstore](https://petstore.swagger.io/#/) 
- - [ServeRest](https://serverest.dev/#/)
- - [ServeRest - Datadog](https://p.datadoghq.eu/sb/421fcfee-35ec-11ee-b87f-da7ad0900005-2aaf85264a89d11b7001bcab452a266e?refresh_mode=sliding&theme=light&tpl_var_env%5B0%5D=serverest.dev&from_ts=1699931511294&to_ts=1699932411294&live=true)
- 
+## Pré-requisitos
+
+Antes de executar os testes, você precisa ter o seguinte instalado:
+
+- **Node.js** versão v20 ou superior
+- **npm** (ou **yarn**)
+
+## Instalação
+
+Clone o repositório e instale as dependências com os seguintes comandos:
+
+```bash
+git clone https://github.com/seu-usuario/seu-repo.git
+cd seu-repo
+npm install
+
+
+
