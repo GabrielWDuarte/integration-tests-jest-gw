@@ -2,9 +2,9 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ master ]  # Branch principal é "master"
+    branches: [ master ]
   pull_request:
-    branches: [ master ]  # Branch principal é "master"
+    branches: [ master ]
   schedule:
     - cron: '0 12 * * *'
 
@@ -13,15 +13,15 @@ jobs:
     name: Run Integration Tests
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4.1.1
-      - name: Use Node.js 21
-        uses: actions/setup-node@v4.0.0
-        with:
-          node-version: 21
-          cache: 'npm'
-      - run: npm install
-      - run: npm test --coverage
-
+    - uses: actions/checkout@v4.1.1
+    - name: Use Node.js 21
+      uses: actions/setup-node@v4.0.0
+      with:
+        node-version: 21
+        cache: 'npm'
+    - run: npm install
+    - run: npm test --coverage
+  
   sonarcloud:
     name: Run SonarCloud
     runs-on: ubuntu-latest
