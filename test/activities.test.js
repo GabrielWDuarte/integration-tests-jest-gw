@@ -9,7 +9,7 @@ describe('Testes de Integração para Activities', () => {
       .expectStatus(200);  // Espera o status 200 OK
     expect(response.body).toBeInstanceOf(Array);  // Espera que a resposta seja um array
   });
-
+ 
   // Teste para criar uma nova atividade (POST /api/v1/Activities)
   it('Deve criar uma nova atividade', async () => {
     const newActivity = {
