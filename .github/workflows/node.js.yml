@@ -21,7 +21,7 @@ jobs:
         cache: 'npm'
     - run: npm install
     - run: npm test --coverage 
-
+ 
   sonarcloud:
     name: Run SonarCloud
     runs-on: ubuntu-latest
