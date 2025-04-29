@@ -15,14 +15,14 @@ Os principais endpoints testados deste projeto são:
 - `GET /api/v1/Activities` - Lista todas as atividades
 - `POST /api/v1/Activities` - Cria uma nova atividade
 - `GET /api/v1/Activities/{id}` - Busca uma atividade pelo ID
-- **PUT /api/v1/Activities/{id}** - Atualiza uma atividade pelo ID
-- **DELETE /api/v1/Activities/{id}** - Remove uma atividade pelo ID
+- `PUT /api/v1/Activities/{id}` - Atualiza uma atividade pelo ID
+- `DELETE /api/v1/Activities/{id}` - Remove uma atividade pelo ID
 
 A documentação completa da API pode ser encontrada [aqui](https://fakerestapi.azurewebsites.net/index.html).
 
 ## Pré-requisitos
 
-- Node.js v20 ou superior
+- Node.js `v20` ou superior
 - npm
 
 ## Instalação
