@@ -4,9 +4,9 @@ Este projeto realiza testes de integração automatizados para a API Fakerestapi
 
 ## Tecnologias Utilizadas
 
-- [**PactumJS**] - Framework para testes de API
-- [**ESLint**] - Linter para JavaScript
-- **[SonarQube]** - Análise de qualidade de código
+- **PactumJS** - Framework para testes de API
+- **ESLint** - Linter para JavaScript
+- **SonarQube** - Análise de qualidade de código
 
 ## Endpoints Testados
 
@@ -66,6 +66,6 @@ A análise de qualidade do código é feita via SonarQube. Consulte o pipeline C
 
 ## Referências
 
-- [**Fakerestapi Swagger**] 
-- [**PactumJS Docs**]
-- [**Jest Docs**] 
+- [Fakerestapi Swagger](#)
+- [PactumJS Docs](#)
+- [Jest Docs](#)
