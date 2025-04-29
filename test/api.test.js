@@ -7,7 +7,7 @@ describe('API Reqres Testes de Integração', () => {
   // Cenário 1: Obter lista de usuários na página 1
   it('Deve obter lista de usuários na página 1', async () => {
     const response = await pactum.spec()
-      .addHeader('x-api-key', apiKey)  // Adicionando cabeçalho com chave de API
+      .withHeaders('x-api-key', apiKey)  // Corrigido para 'withHeaders'
       .get('https://reqres.in/api/users?page=1')
       .expectStatus(200)
       .expectJsonLike({
@@ -27,7 +27,7 @@ describe('API Reqres Testes de Integração', () => {
   // Cenário 2: Obter lista de usuários na página 2
   it('Deve obter lista de usuários na página 2', async () => {
     const response = await pactum.spec()
-      .addHeader('x-api-key', apiKey)
+      .withHeaders('x-api-key', apiKey)  // Corrigido para 'withHeaders'
       .get('https://reqres.in/api/users?page=2')
       .expectStatus(200);
   });
@@ -35,7 +35,7 @@ describe('API Reqres Testes de Integração', () => {
   // Cenário 3: Criar um novo usuário
   it('Deve criar um novo usuário', async () => {
     const response = await pactum.spec()
-      .addHeader('x-api-key', apiKey)
+      .withHeaders('x-api-key', apiKey)  // Corrigido para 'withHeaders'
       .post('https://reqres.in/api/users')
       .withJson({
         name: "John Doe",
@@ -47,7 +47,7 @@ describe('API Reqres Testes de Integração', () => {
   // Cenário 4: Obter detalhes de um usuário específico
   it('Deve obter detalhes de um usuário específico', async () => {
     const response = await pactum.spec()
-      .addHeader('x-api-key', apiKey)
+      .withHeaders('x-api-key', apiKey)  // Corrigido para 'withHeaders'
       .get('https://reqres.in/api/users/2')
       .expectStatus(200);
   });
@@ -55,7 +55,7 @@ describe('API Reqres Testes de Integração', () => {
   // Cenário 5: Atualizar um usuário específico
   it('Deve atualizar um usuário específico', async () => {
     const response = await pactum.spec()
-      .addHeader('x-api-key', apiKey)
+      .withHeaders('x-api-key', apiKey)  // Corrigido para 'withHeaders'
       .put('https://reqres.in/api/users/2')
       .withJson({
         name: "John Doe",
@@ -67,7 +67,7 @@ describe('API Reqres Testes de Integração', () => {
   // Cenário 6: Deletar um usuário
   it('Deve deletar um usuário', async () => {
     const response = await pactum.spec()
-      .addHeader('x-api-key', apiKey)
+      .withHeaders('x-api-key', apiKey)  // Corrigido para 'withHeaders'
       .delete('https://reqres.in/api/users/2')
       .expectStatus(204);
   });
@@ -75,7 +75,7 @@ describe('API Reqres Testes de Integração', () => {
   // Cenário 7: Retornar erro ao tentar obter usuário com ID inexistente
   it('Deve retornar erro ao tentar obter usuário com ID inexistente', async () => {
     const response = await pactum.spec()
-      .addHeader('x-api-key', apiKey)
+      .withHeaders('x-api-key', apiKey)  // Corrigido para 'withHeaders'
       .get('https://reqres.in/api/users/999')
       .expectStatus(404);
   });
@@ -83,7 +83,7 @@ describe('API Reqres Testes de Integração', () => {
   // Cenário 8: Retornar erro ao criar um usuário sem nome
   it('Deve retornar erro ao criar um usuário sem nome', async () => {
     const response = await pactum.spec()
-      .addHeader('x-api-key', apiKey)
+      .withHeaders('x-api-key', apiKey)  // Corrigido para 'withHeaders'
       .post('https://reqres.in/api/users')
       .withJson({
         job: "Software Engineer"
@@ -94,7 +94,7 @@ describe('API Reqres Testes de Integração', () => {
   // Cenário 9: Retornar erro ao atualizar usuário com dados inválidos
   it('Deve retornar erro ao atualizar usuário com dados inválidos', async () => {
     const response = await pactum.spec()
-      .addHeader('x-api-key', apiKey)
+      .withHeaders('x-api-key', apiKey)  // Corrigido para 'withHeaders'
       .put('https://reqres.in/api/users/2')
       .withJson({
         name: "",
@@ -106,7 +106,7 @@ describe('API Reqres Testes de Integração', () => {
   // Cenário 10: Criar um novo usuário com dados válidos
   it('Deve criar um novo usuário com dados válidos', async () => {
     const response = await pactum.spec()
-      .addHeader('x-api-key', apiKey)
+      .withHeaders('x-api-key', apiKey)  // Corrigido para 'withHeaders'
       .post('https://reqres.in/api/users')
       .withJson({
         name: "Alice Doe",
