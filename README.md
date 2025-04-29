@@ -4,11 +4,9 @@ Este projeto realiza testes de integração automatizados para a API Fakerestapi
 
 ## Tecnologias Utilizadas
 
-- **Jest** - Test runner
-- **PactumJS** - Framework para testes de API
-- **Prettier** - Formatação de código
-- **ESLint** - Linter para JavaScript
-- **SonarQube** - Análise de qualidade de código
+- [**PactumJS**] - Framework para testes de API
+- [**ESLint**] - Linter para JavaScript
+- [**SonarQube**] - Análise de qualidade de código
 
 ## Endpoints Testados
 
@@ -20,7 +18,7 @@ Os principais endpoints testados deste projeto são:
 - **PUT /api/v1/Activities/{id}** - Atualiza uma atividade pelo ID
 - **DELETE /api/v1/Activities/{id}** - Remove uma atividade pelo ID
 
-A documentação completa da API pode ser encontrada [aqui](swagger/v1/swagger.json).
+A documentação completa da API pode ser encontrada [aqui](https://fakerestapi.azurewebsites.net/index.html).
 
 ## Pré-requisitos
 
@@ -68,6 +66,6 @@ A análise de qualidade do código é feita via SonarQube. Consulte o pipeline C
 
 ## Referências
 
-- **Fakerestapi Swagger** 
-- **PactumJS Docs** 
-- **Jest Docs** 
+- [**Fakerestapi Swagger**] 
+- [**PactumJS Docs**]
+- [**Jest Docs**] 
