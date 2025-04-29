@@ -1,39 +1,40 @@
-# API Integration Tests - Fakerestapi (Activities)
+# API Integration Tests - Reqres API
 
-Este projeto realiza testes de integração automatizados para a API Fakerestapi, focando nos endpoints relacionados a Activities. Utiliza as ferramentas PactumJS, ESLint e integração com SonarQube para garantir qualidade, padronização e cobertura dos testes.
+Este projeto realiza testes de integração automatizados para a API Reqres, focando nos principais endpoints da API, como GET, POST, PUT e DELETE. Utiliza as ferramentas **PactumJS**, **ESLint**, **GitHub Actions** e **SonarCloud** para garantir qualidade, padronização e cobertura dos testes.
 
 ## Tecnologias Utilizadas
 
 - **PactumJS** - Framework para testes de API
 - **ESLint** - Linter para JavaScript
-- **SonarQube** - Análise de qualidade de código
+- **SonarCloud** - Análise de qualidade de código
+- **GitHub Actions** - Integração contínua para execução de testes e pipeline automatizado
 
 ## Endpoints Testados
 
 Os principais endpoints testados deste projeto são:
 
-- `GET /api/v1/Activities` - Lista todas as atividades
-- `POST /api/v1/Activities` - Cria uma nova atividade
-- `GET /api/v1/Activities/{id}` - Busca uma atividade pelo ID
-- `PUT /api/v1/Activities/{id}` - Atualiza uma atividade pelo ID
-- `DELETE /api/v1/Activities/{id}` - Remove uma atividade pelo ID
+- `GET /api/users?page={page_number}` - Obtém uma lista de usuários de acordo com o número da página.
+- `POST /api/users` - Cria um novo usuário com o nome e trabalho fornecidos.
+- `GET /api/users/{id}` - Obtém detalhes de um usuário específico.
+- `PUT /api/users/{id}` - Atualiza o nome e o trabalho de um usuário específico.
+- `DELETE /api/users/{id}` - Deleta um usuário específico.
 
-A documentação completa da API pode ser encontrada [aqui](https://fakerestapi.azurewebsites.net/index.html).
+A documentação completa da API pode ser encontrada [aqui](https://reqres.in/).
 
 ## Pré-requisitos
 
-- Node.js `v20` ou superior
-- npm
+- **Node.js** `v21` ou superior
+- **npm** - Gerenciador de pacotes
 
 ## Instalação
 
 Clone o repositório e instale as dependências:
 
 ```bash
-git clone https://github.com/seu-usuario/seu-repo.git
-cd seu-repo
+git clone https://github.com/seu-usuario/GabrielDuarte-Turma001-ApiTest.git
+cd GabrielDuarte-Turma001-ApiTest
 npm install
-```
+
 
 ## Como executar os testes
 
@@ -66,6 +67,8 @@ A análise de qualidade do código é feita via SonarQube. Consulte o pipeline C
 
 ## Referências
 
-- [Fakerestapi Swagger](#)
+- [Reqres API Documentation](#)
 - [PactumJS Docs](#)
 - [Jest Docs](#)
+- [SonarCloud Docs](#)
+- [GitHub Actions Docs](#)
