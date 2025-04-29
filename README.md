@@ -1,57 +1,73 @@
 # API Integration Tests - Fakerestapi (Activities)
 
-Este projeto realiza testes de integração automatizados para a **API Fakerestapi**, focando nos endpoints relacionados a **Activities**. Utiliza as ferramentas **Jest**, **PactumJS**, **Prettier**, **ESLint** e integração com **SonarQube** para garantir qualidade, padronização e cobertura dos testes.
+Este projeto realiza testes de integração automatizados para a API Fakerestapi, focando nos endpoints relacionados a Activities. Utiliza as ferramentas Jest, PactumJS, Prettier, ESLint e integração com SonarQube para garantir qualidade, padronização e cobertura dos testes.
 
 ## Tecnologias Utilizadas
 
-- **Jest** - Test runner para execução dos testes.
-- **PactumJS** - Framework para testes de API, utilizado para realizar chamadas HTTP e validar as respostas.
-- **Prettier** - Ferramenta para formatação automática de código, garantindo consistência.
-- **ESLint** - Linter para detectar e corrigir problemas no código JavaScript.
-- **SonarQube** - Ferramenta de análise de qualidade de código, usada para garantir que o código esteja livre de problemas.
+- **Jest** - Test runner
+- **PactumJS** - Framework para testes de API
+- **Prettier** - Formatação de código
+- **ESLint** - Linter para JavaScript
+- **SonarQube** - Análise de qualidade de código
 
 ## Endpoints Testados
 
 Os principais endpoints testados deste projeto são:
 
-- **GET /api/v1/Activities** - Lista todas as atividades.
-- **POST /api/v1/Activities** - Cria uma nova atividade.
-- **GET /api/v1/Activities/{id}** - Busca uma atividade específica pelo ID.
-- **PUT /api/v1/Activities/{id}** - Atualiza uma atividade existente pelo ID.
-- **DELETE /api/v1/Activities/{id}** - Remove uma atividade pelo ID.
+- **GET /api/v1/Activities** - Lista todas as atividades
+- **POST /api/v1/Activities** - Cria uma nova atividade
+- **GET /api/v1/Activities/{id}** - Busca uma atividade pelo ID
+- **PUT /api/v1/Activities/{id}** - Atualiza uma atividade pelo ID
+- **DELETE /api/v1/Activities/{id}** - Remove uma atividade pelo ID
 
-### Exemplos de testes realizados:
-
-1. **GET /api/v1/Activities**:
-   - Este teste verifica se a API retorna corretamente uma lista de todas as atividades.
-
-2. **POST /api/v1/Activities**:
-   - Este teste cria uma nova atividade e verifica se a resposta contém os dados da nova atividade.
-
-3. **GET /api/v1/Activities/{id}**:
-   - Este teste verifica se uma atividade específica pode ser recuperada corretamente pelo seu ID.
-
-4. **PUT /api/v1/Activities/{id}**:
-   - Este teste realiza a atualização de uma atividade existente e valida se a alteração foi feita corretamente.
-
-5. **DELETE /api/v1/Activities/{id}**:
-   - Este teste exclui uma atividade pelo seu ID e verifica se o processo foi concluído com sucesso.
+A documentação completa da API pode ser encontrada [aqui](swagger/v1/swagger.json).
 
 ## Pré-requisitos
 
-Antes de executar os testes, você precisa ter o seguinte instalado:
-
-- **Node.js** versão v20 ou superior
-- **npm** (ou **yarn**)
+- Node.js v20 ou superior
+- npm
 
 ## Instalação
 
-Clone o repositório e instale as dependências com os seguintes comandos:
+Clone o repositório e instale as dependências:
 
 ```bash
 git clone https://github.com/seu-usuario/seu-repo.git
 cd seu-repo
 npm install
+```
+
+## Como executar os testes
+
+Execute os testes com o comando:
+
+```bash
+npm test
+```
+Ou, para rodar o pipeline completo (incluindo lint e prettier):
+```bash
+npm run ci
+```
+Após a execução, os relatórios de testes podem ser encontrados na pasta ./output.
+
+## Padronização de Código
+
+Para formatar o código:
+```bash
+npm run format
+```
+Para checar problemas de lint:
+```bash
+npm run lint
+```
+
+## Análise de Qualidade
+
+A análise de qualidade do código é feita via SonarQube. Consulte o pipeline CI para detalhes.
 
 
+## Referências
 
+- **Fakerestapi Swagger** 
+- **PactumJS Docs** 
+- **Jest Docs** 
