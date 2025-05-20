@@ -3,7 +3,7 @@
 Este projeto realiza testes de integração automatizados para a API Reqres, focando nos principais endpoints da API, como GET, POST, PUT e DELETE. Utiliza as ferramentas **PactumJS**, **ESLint**, **GitHub Actions** e **SonarCloud** para garantir qualidade, padronização e cobertura dos testes.
 
 ## Tecnologias Utilizadas
-
+ 
 - **PactumJS** - Framework para testes de API
 - **ESLint** - Linter para JavaScript
 - **SonarCloud** - Análise de qualidade de código
